@@ -4,11 +4,10 @@
   "description": "a test made for tray.io recruitment system",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest --watchAll --verbose"
   },
   "author": "AlicKa",
   "license": "ISC",
-  "dependencies": {
-    "line-reader": "^0.4.0"
-  }
+  "dependencies": {}
 }

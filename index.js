@@ -8,20 +8,20 @@ let initHoover = data[1].toString().split(" ").map(Number);
 let directions = data[data.length -1].toString().split("");
 let dirt = data.slice(2,-1);
 let dirtCleared = 0;
-let route = [];
 
 dirt = dirt.map((element) => {
     return element.split(' ').map(Number)
 });
 
-moveHoover(initHoover, directions, roomDimentions);
-
-console.log(route[route.length-1]);
-console.log(dirtCleared);
+if (!isHooverInRoom(roomDimentions, initHoover)){
+   console.log('Your imaginary hoover was never placed in the room! :( ')
+}
+else moveHoover(initHoover, directions, roomDimentions);
 
 function moveHoover (hoover, direction, room){
-    let x = hoover[0]
-    let y = hoover[1]
+   let x = hoover[0]
+   let y = hoover[1]
+   let route = [];
 
     for (elem of direction){
         if(elem === 'N' && y < room[1]){
@@ -44,8 +44,10 @@ function moveHoover (hoover, direction, room){
             hasBeenCleaned(x, y, dirt)
             route.push([x, y])
         }
-    }  
-}
+   } 
+   console.log(route[route.length-1]);
+   console.log(dirtCleared); 
+};
 function hasBeenCleaned(x, y, dirtPatch) {
     for (shotIndex in dirtPatch) {
         let el = dirtPatch[shotIndex]
@@ -55,3 +57,10 @@ function hasBeenCleaned(x, y, dirtPatch) {
         }
     }
 };
+function isHooverInRoom (room, hoover){
+   if (hoover[0] > room[0] || hoover[1] > room[1]){
+      return false
+   }
+   else
+   return true
+}
