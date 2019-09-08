@@ -14,32 +14,32 @@ dirt = dirt.map((element) => {
     return element.split(' ').map(Number)
 });
 
-moveHoover();
+moveHoover(initHoover, directions, roomDimentions);
 
 console.log(route[route.length-1]);
 console.log(dirtCleared);
 
-function moveHoover (){
-    let x = initHoover[0]
-    let y = initHoover[1]
+function moveHoover (hoover, direction, room){
+    let x = hoover[0]
+    let y = hoover[1]
 
-    for (elem of directions){
-        if(elem === 'N'){
+    for (elem of direction){
+        if(elem === 'N' && y < room[1]){
             y++
             hasBeenCleaned(x, y, dirt)
             route.push([x, y])
         }
-        if(elem === 'S'){
+        if(elem === 'S' && y > 0){
             y--
             hasBeenCleaned(x, y, dirt)
             route.push([x, y])
         }
-        if(elem === 'E'){
+        if(elem === 'E' && x < room[0]){
             x++
             hasBeenCleaned(x, y, dirt)
             route.push([x, y])
         }
-        if(elem === 'W'){
+        if(elem === 'W' && x > 0){
             x--
             hasBeenCleaned(x, y, dirt)
             route.push([x, y])
