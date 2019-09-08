@@ -13,10 +13,7 @@ dirt = dirt.map((element) => {
     return element.split(' ').map(Number)
 });
 
-if (!isHooverInRoom(roomDimentions, initHoover)){
-   console.log('Your imaginary hoover was never placed in the room! :( ')
-}
-else moveHoover(initHoover, directions, roomDimentions);
+isHooverInRoom(roomDimentions, initHoover);
 
 function moveHoover (hoover, direction, room){
    let x = hoover[0]
@@ -59,8 +56,8 @@ function hasBeenCleaned(x, y, dirtPatch) {
 };
 function isHooverInRoom (room, hoover){
    if (hoover[0] > room[0] || hoover[1] > room[1]){
-      return false
+    return console.error(400, 'Your imaginary hoover was never placed in the room! Simulation aborted :(');
    }
    else
-   return true
+   moveHoover(initHoover, directions, roomDimentions);
 }

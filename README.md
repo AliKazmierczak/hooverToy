@@ -2,7 +2,6 @@
 
 # Description
 This is a simple simulation of an imaginary robotic hoover navigating with given directions around an imaginary room with established dimentions.
-Although it wasn't required - this simulation checks whether the imaginary hoover is in the room at the start.
 
 # Table of contents
     * Installation/Setup
@@ -38,4 +37,5 @@ Although it wasn't required - this simulation checks whether the imaginary hoove
 | **Alicja Kaźmierczak** |
 
 # End notes
-In this case .gitignore file is pretty useless since I didn't have any files to ignore. Usually it would contain any sensitive data (like passwords or ports) or unnecessary (node_modules is a large file that is created during npm install command).
+Although it wasn't required, I decided to add a few lines that check whether the hoover's initial position is whithin the established room. The simulation starts only if it is. 
+I did this to protect the code from working on invalid input.
