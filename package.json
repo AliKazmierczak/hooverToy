@@ -1,11 +1,14 @@
 {
   "name": "trayhoover",
   "version": "1.0.0",
-  "description": "",
+  "description": "a test made for tray.io recruitment system",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "AlicKa",
+  "license": "ISC",
+  "dependencies": {
+    "line-reader": "^0.4.0"
+  }
 }
