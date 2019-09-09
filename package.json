@@ -4,7 +4,8 @@
   "description": "a test made for tray.io recruitment system",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js input.txt",
+    "fun-time": "node play.js input.txt",
     "test": "jest --watchAll --verbose"
   },
   "author": "AlicKa",
