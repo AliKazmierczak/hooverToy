@@ -17,7 +17,6 @@ This is a simple simulation of an imaginary robotic hoover navigating with given
 - Run:
     ```
     git clone git@github.com:AliKazmierczak/trayHoover.git
-    npm install
     ```
 # Running the code:
 - for tests run:
