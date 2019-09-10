@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js input.txt",
-    "test": "jest --watchAll --verbose"
+    "test": "node ./node_modules/jest/bin/jest.js --verbose"
   },
   "author": "AlicKa",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }

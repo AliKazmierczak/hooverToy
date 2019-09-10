@@ -22,6 +22,7 @@ hooverCoordinates = {
 };
 let hooverInstructions = data[data.length - 1].toString().split("");
 
+console.log(typeof(hooverCoordinates))
 exports.roomDimentions = roomDimentions;
 exports.dirtPatchesCoordinates = dirtPatchesCoordinates;
 exports.hooverCoordinates = hooverCoordinates;
