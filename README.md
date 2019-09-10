@@ -7,7 +7,6 @@ This is a simple simulation of an imaginary robotic hoover navigating with given
     * Requirements
     * Installation/Setup
     * Running the code
-    * Usage
     * Technologies
     * End notes
 # Requirements
@@ -32,11 +31,6 @@ This is a simple simulation of an imaginary robotic hoover navigating with given
     ```
     node index.js .\newFileName.txt
     ```
-
-# Usage 
-This simulation has little usage outside of fun and games.
-## This program
-Doesn't allow for invalid placement of the imaginary hoover inside the imaginary room.
 
 # Technologies used:
 - node js

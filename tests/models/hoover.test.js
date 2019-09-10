@@ -45,7 +45,7 @@ describe('tests for hoover following instructions', () => {
         let instructions = [];
         let testerHoover = new Hoover(instructions);
 
-        expect(() => { testerHoover.followTheInstructions({x: 0, y: 0}) }).toThrow();
+        expect( () => { testerHoover.followTheInstructions({x: 0, y: 0}) }).toThrow();
     });
     test("does instructions only once and throws exception afterwards", () => {
         let instructions = ["N", "W"];

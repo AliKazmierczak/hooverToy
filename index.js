@@ -17,6 +17,7 @@ let room = new Room(
     hoover
 );
 
+room.clean()
 
 
 
