@@ -1,5 +1,5 @@
 exports.Room = class Room {
-    constructor(dimentions,dirtPatchesCoordinates, hooverCoordinates, hoover){
+    constructor(dimentions, dirtPatchesCoordinates, hooverCoordinates, hoover) {
         this.dimentions = dimentions;
         this.dirtPatchesCoordinates = dirtPatchesCoordinates;
         this.hooverCoordinates = hooverCoordinates;
@@ -16,11 +16,11 @@ exports.Room = class Room {
         return true
     };
     clean() {
-        try{
-            while(true){
+        try {
+            while (true) {
                 let newHooverCoordinates = this.hoover.followTheInstructions(this.hooverCoordinates);
 
-                if(this.isHooverInARoom(newHooverCoordinates) == true){
+                if (this.isHooverInARoom(newHooverCoordinates) == true) {
                     this.hooverCoordinates = newHooverCoordinates;
                     this.hasBeenCleaned()
                 }

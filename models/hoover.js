@@ -1,11 +1,9 @@
 exports.Hoover = class Hoover {
-    constructor(instructions){
+    constructor(instructions) {
         this.instructions = instructions
-        // this.followTheInstructions() = followTheInstructions()
     }
-
-    followTheInstructions(currentCoordinates){
-        if (this.instructions.length == 0){
+    followTheInstructions(currentCoordinates) {
+        if (this.instructions.length == 0) {
             throw 'This hoover did not receive any instructions'
         }
 
@@ -30,5 +28,5 @@ exports.Hoover = class Hoover {
                 y: newY
             }
         }
-    }
+    };
 }
